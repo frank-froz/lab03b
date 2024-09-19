@@ -6,17 +6,27 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>-Index-</title>
+    <title>Index--</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h2>---Trabajo Grupal---</h2>
-    <form id="formulario-tarea">
-        <label for="tarea">Nombre de la tarea:</label>
-        <input type="text" id="tarea" name="tarea" required>
-       <button type="submit"> Agregar Tarea</button><br><br>
-       <button> <a href="agregar_tarea.php"> Ver lista</a> </button>
-    </form>
+    <div class="wrapper">
+        <form action="">
+            <h1>Insertar tarea</h1>
 
-    
+            <div class="input-box">
+                <input type="text" placeholder="escribe" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <button class="btn" type="submit">Registrar</button>
+
+            <div class="register-link">
+                <p>Escribe una tarea a la vez <br> <a href=""></a></p>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
