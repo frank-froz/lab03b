@@ -14,4 +14,18 @@ if (isset($_POST['task'])) {
     header("Location: index.php");
     exit();
 }
+// Función para eliminar una tarea
+if (isset($_GET['eliminar'])) {
+    $indice = $_GET['eliminar'];
+    unset($_SESSION['tasks'][$indice]);
+    $_SESSION['tasks'] = array_values($_SESSION['tasks']);  // Reindexar el array
+}
+
+// Función para marcar una tarea como completada
+if (isset($_GET['completar'])) {
+    $indice = $_GET['completar'];
+    $_SESSION['tasks'][$indice]['completada'] = true;
+}  
+header('Location: mostrar_tareas.php');
+exit();  
 ?>
